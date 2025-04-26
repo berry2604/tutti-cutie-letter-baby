@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open When Letters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, lavender, lightblue, lightpink);
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 1em;
+            color: purple;
+        }
+        .letters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2em;
+        }
+        .letter-button {
+            background: white;
+            border: 2px solid purple;
+            border-radius: 10px;
+            padding: 1em;
+            margin: 1em;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+        .letter-button:hover {
+            transform: scale(1.1);
+        }
+        .heart {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            color: red;
+            animation: beat 1s infinite;
+            display: none;
+        }
+        @keyframes beat {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.3); }
+        }
+    </style>
+    <script>
+        function openLetter(letterId) {
+            const heart = document.getElementById("heart");
+            heart.style.display = "block";
+            new Audio("click.mp3").play();
+            setTimeout(() => {
+                window.location.href = letterId + ".html";
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Open When... 💌</h1>
+    <div class="letters">
+<button class="letter-button" onclick="openLetter('letter1')">Open When You Miss Me</button>
+<button class="letter-button" onclick="openLetter('letter2')">Open When You're Sad</button>
+<button class="letter-button" onclick="openLetter('letter3')">Open When You're Stressed</button>
+<button class="letter-button" onclick="openLetter('letter4')">Open When You're Happy</button>
+<button class="letter-button" onclick="openLetter('letter5')">Open When You Can't Sleep</button>
+<button class="letter-button" onclick="openLetter('letter6')">Open When You're Angry at Someone</button>
+<button class="letter-button" onclick="openLetter('letter7')">Open When You're Angry at Me</button>
+<button class="letter-button" onclick="openLetter('letter8')">Open When You Feel Alone</button>
+<button class="letter-button" onclick="openLetter('letter9')">Open When You Feel Unloved</button>
+<button class="letter-button" onclick="openLetter('letter10')">Open When You Feel Insecure</button>
+<button class="letter-button" onclick="openLetter('letter11')">Open When You're Bored</button>
+<button class="letter-button" onclick="openLetter('letter12')">Open When You Need Motivation</button>
+<button class="letter-button" onclick="openLetter('letter13')">Open When You Have a Bad Day</button>
+<button class="letter-button" onclick="openLetter('letter14')">Open When You Doubt Yourself</button>
+<button class="letter-button" onclick="openLetter('letter15')">Open When You Feel Sick</button>
+<button class="letter-button" onclick="openLetter('letter16')">Open When You Achieve Something</button>
+<button class="letter-button" onclick="openLetter('letter17')">Open When You Need Courage</button>
+<button class="letter-button" onclick="openLetter('letter18')">Open When You're Crying</button>
+<button class="letter-button" onclick="openLetter('letter19')">Open When You're Feeling Lost</button>
+<button class="letter-button" onclick="openLetter('letter20')">Open When You Miss My Voice</button>
+<button class="letter-button" onclick="openLetter('letter21')">Open When You Miss My Hugs</button>
+<button class="letter-button" onclick="openLetter('letter22')">Open When You Want to Quit</button>
+<button class="letter-button" onclick="openLetter('letter23')">Open When You Feel Like Giving Up</button>
+<button class="letter-button" onclick="openLetter('letter24')">Open When You Need to Smile</button>
+<button class="letter-button" onclick="openLetter('letter25')">Open When You're Feeling Nostalgic</button>
+<button class="letter-button" onclick="openLetter('letter26')">Open When It's Raining</button>
+<button class="letter-button" onclick="openLetter('letter27')">Open When You're Watching the Sunset</button>
+<button class="letter-button" onclick="openLetter('letter28')">Open When You Feel Jealous</button>
+<button class="letter-button" onclick="openLetter('letter29')">Open When You Feel Guilty</button>
+<button class="letter-button" onclick="openLetter('letter30')">Open When You Miss Our Calls</button>
+<button class="letter-button" onclick="openLetter('letter31')">Open When You Think I Don’t Understand You</button>
+<button class="letter-button" onclick="openLetter('letter32')">Open When You Feel Like Nobody Cares</button>
+<button class="letter-button" onclick="openLetter('letter33')">Open When You're Missing Home</button>
+<button class="letter-button" onclick="openLetter('letter34')">Open When You're Feeling Lazy</button>
+<button class="letter-button" onclick="openLetter('letter35')">Open When It's Our Anniversary</button>
+<button class="letter-button" onclick="openLetter('letter36')">Open When You're Wondering About Our Future</button>
+
+    </div>
+    <div id="heart" class="heart">❤️</div>
+</body>
+</html>
